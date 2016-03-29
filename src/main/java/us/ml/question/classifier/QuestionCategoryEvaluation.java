@@ -59,7 +59,7 @@ public class QuestionCategoryEvaluation extends Evaluation_ImplBase<File, Annota
 
     @Option(longName = "models-dir",
         description = "specify the directory in which to write out the trained model files",
-        defaultValue = "models/document_classification/models")
+        defaultValue = "models/question_classification/models")
     public File getModelsDirectory();
 
     @Option(longName = "training-args",
