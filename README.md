@@ -14,7 +14,7 @@ A typical dataset for this problem would look like the following:
 5. NUM:date When did Hawaii become a state ?
 6. NUM:dist How tall is the Sears Building ?
 
-The first two words separated by ":" denote the class or the category of the question. For simplicity and in this initial attempt, we have chosen only the first word as the category i.e. for data : "HUM:desc Who was Galileo ?" HUM is the category of the question. The second part can again be detected using another classifier (heirarichal classifiers).
+The first two words separated by ":" denote the class or the category of the question. For simplicity and in this initial attempt, we have chosen only the first word as the category i.e. for data : "HUM:desc Who was Galileo ?" HUM is the category of the question. The second part can again be detected using another classifier (hierarchical classifiers).
 
 Complete dataset is available [here](http://cogcomp.cs.illinois.edu/Data/QA/QC/train_1000.label)
 #Implementation
@@ -60,3 +60,8 @@ Holdout Set Results:
 |0.981	|0.630	|0.767	|81	|52	|51	|LOC
 |0.987	|0.664	|0.794	|113	|76	|75	|NUM
 
+#Future Work
+
+1. More feature engineering can be done to identify feature apart from the listed ones.
+2. Trying with different SVM kernels to see if there are any improvements.
+3. See if this could be achieved using word2vec or Neural networks.
