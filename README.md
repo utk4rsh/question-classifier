@@ -31,6 +31,15 @@ Following features are used to train the model
 4. Wordnet Hypernyms for head word for better regularization of features.
 5. N grams of the question text.
 
+#Steps to Execute
+
+1. git clone https://github.com/utk4rsh/question-classifier.git ( do git pull if you have cloned in the past)
+2. mvn install:install-file -Dfile=lib/edu.mit.jwi_2.4.0.jar -DgroupId=edu.mit -DartifactId=jwi -Dversion=2.4.0 -Dpackaging=jar
+3. mvn clean install
+4. mvn exec:java -Dexec.mainClass="us.ml.question.classifier.QuestionCategoryEvaluation" -Dexec.cleanupDaemonThreads=false
+
+This should produce the below accuracy.
+
 #Acccuracy
 
 Cross Validation Results:
