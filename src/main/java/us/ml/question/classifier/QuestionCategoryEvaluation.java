@@ -64,7 +64,7 @@ public class QuestionCategoryEvaluation extends Evaluation_ImplBase<File, Annota
 
     @Option(longName = "training-args",
         description = "specify training arguments to be passed to the learner.  For multiple values specify -ta for each - e.g. '-ta -t -ta 0'",
-        defaultValue = {"-c", "2.0", "-s", "0", "-t", "0"})
+        defaultValue = {"-c", "1.0", "-s", "0", "-t", "0"})
     public List<String> getTrainingArguments();
   }
 
