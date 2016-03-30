@@ -37,7 +37,7 @@ public class App {
     public File getTestDirectory();
 
     @Option(longName = "models-dir", description = "specify the directory containing the trained model jar",
-        defaultValue = "models/document_classification/models/train_and_test")
+        defaultValue = "models/question_classification/models/train_and_test")
     public File getModelsDirectory();
   }
 
