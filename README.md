@@ -1,10 +1,10 @@
-#Question Classification
+# Question Classification
 
-#Introduction
+# Introduction
 
 This project is an attempt to write a SVM based Question Classifier. A lot of feature extraction is motivated by the Paper [Question Classification using Head Words and their Hypernyms](http://www.aclweb.org/anthology/D08-1097)
 
-#Problem DataSet
+# Problem DataSet
 A typical dataset for this problem would look like the following:
 
 1. NUM:dist How far is it from Denver to Aspen ?
@@ -17,11 +17,11 @@ A typical dataset for this problem would look like the following:
 The first two words separated by ":" denote the class or the category of the question. For simplicity and in this initial attempt, we have chosen only the first word as the category i.e. for data : "HUM:desc Who was Galileo ?" HUM is the category of the question. The second part can again be detected using another classifier (hierarchical classifiers).
 
 Complete dataset is available [here](http://cogcomp.cs.illinois.edu/Data/QA/QC/train_1000.label)
-#Implementation
+# Implementation
 
 We use SVM based linear classifier to build a model to classify a given question to a correct class.
 
-##Feature Extraction
+## Feature Extraction
 
 Following features are used to train the model
 
@@ -31,7 +31,7 @@ Following features are used to train the model
 4. Wordnet Hypernyms for head word for better regularization of features.
 5. N grams of the question text.
 
-#Steps to Execute
+# Steps to Execute
 
 1. git clone https://github.com/utk4rsh/question-classifier.git ( do git pull if you have cloned in the past)
 2. mvn install:install-file -Dfile=lib/edu.mit.jwi_2.4.0.jar -DgroupId=edu.mit -DartifactId=jwi -Dversion=2.4.0 -Dpackaging=jar
@@ -40,7 +40,7 @@ Following features are used to train the model
 
 This should produce the below accuracy.
 
-#Acccuracy
+# Acccuracy
 
 Cross Validation Results:
 
@@ -69,8 +69,8 @@ Holdout Set Results:
 |0.981	|0.630	|0.767	|81	|52	|51	|LOC
 |0.987	|0.664	|0.794	|113	|76	|75	|NUM
 
-#Future Work
+# Future Work
 
 1. More feature engineering can be done to identify feature apart from the listed ones.
 2. Trying with different SVM kernels to see if there are any improvements.
-3. See if this could be achieved using word2vec or Neural networks.
+3. See if this could be achieved using word2vec or Neural networks.(https://github.com/ashishbaghudana/question_classification)
